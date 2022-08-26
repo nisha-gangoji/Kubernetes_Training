@@ -1,6 +1,15 @@
 # ASSIGNMENT 4 : VOTING APP
 
+# Commands Used :
+* `git clone  https://github.com/ashishrpandey/example-voting-app`
+* `cd  /root/example-voting-app/k8s-specifications`
+* `kubectl delete all --all`
+* `kubectl apply -f .`
+* `kubectl get all`
+
+
 # My observations:
+Observations after deleting the pods :
 1. What happened after deleting voting pod?
   * Command used : `kubectl delete po vote-94849dc97-5w9wp`
   * The voting application is working fine
@@ -13,7 +22,6 @@
   * A new pod gets created with a new pod_hash/NAME :
       Earlier it was "worker-dd46d7584-8dk8t" and now it is "worker-dd46d7584-2jx5h"
   
-
 3. What happened after db pod deletion?
   * Command used : `kubectl delete po db-b54cd94f4-bclmv`
   * The voting application stopped working after deleting the db pod. We can give the votes but the results does not gets updated.
