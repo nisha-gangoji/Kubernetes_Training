@@ -59,24 +59,13 @@ Error performing query: Error: This socket has been ended by the other party
 # How to make the RESULT POD work again?
 **The connection got established back, after deleting the results pod.**
 * Command used : `kubectl delete po result-5d57b59f4b-6s9wx`
-* Snapshot of the same:
-```
-[root@ip-172-31-3-62 k8s-specifications]# kubectl delete po result-5d57b59f4b-zxb9c
-pod "result-5d57b59f4b-zxb9c" deleted
-[root@ip-172-31-3-62 k8s-specifications]# kubectl get po
-NAME                      READY   STATUS    RESTARTS   AGE
-db-b54cd94f4-jvs67        1/1     Running   0          7m33s
-redis-868d64d78-466g8     1/1     Running   0          103m
-result-5d57b59f4b-swms5   1/1     Running   0          68s
-vote-94849dc97-qfknr      1/1     Running   0          90m
-worker-dd46d7584-5wd4s    1/1     Running   1          21m
-```
 
 # Some Jargons learnt so far:
 * Docker :
   * Isolation and Abstraction
   * Docker Daemon -> Docker Engine
   * Creation of containers and docker images
+* Microservices  
 * Kuberentes :
   *  Cluster
   *  Node
